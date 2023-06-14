@@ -10,7 +10,8 @@ export const StyledFieldSet = styled.fieldset`
   position: relative;
 
   label{
-    font-size: 12.81px
+    font-size: 12.81px;
+    margin-bottom:16px;
   }
 
   input,
@@ -31,11 +32,6 @@ select{
 }
 
 
-input{
-    margin: 22px 0 9px;
-
-}
-
   input:hover,
   input:focus{
     border: 1px solid ${theme.colors.grey0};
@@ -44,6 +40,7 @@ input{
   span {
     font-size: 12px;
     color: ${theme.colors.grey1};
+    margin-top:9px;
   }
 
 `;
