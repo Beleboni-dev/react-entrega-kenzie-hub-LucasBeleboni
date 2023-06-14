@@ -1,5 +1,5 @@
 import styled, { css } from "styled-components";
-import { theme } from "../../../../../styles/GlobalStyles";
+import { theme } from "./GlobalStyles";
 
 const headerBtnStyles = css`
   height: 40px;

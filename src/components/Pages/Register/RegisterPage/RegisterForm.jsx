@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { FormProvider, useForm } from "react-hook-form";
 import { HeadlineBold, Title1 } from "../../../../../styles/Typograph";
-import { StyledRegisterBtn } from "../stylesRegister/StyledRegisterButtons";
 import { StyledForm } from "../../../../../styles/StyledForm";
 import { TextInput } from "../../../FormComponents/TextInput";
 import { SelectInput } from "../../../FormComponents/SelectInput";
@@ -12,6 +11,7 @@ import { formSchema } from "../../../../schemas/FormSchemas";
 import { api, endpoints } from "../../../../api/api";
 import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
+import { StyledRegisterBtn } from "../../../../../styles/StyledRegisterButtons";
 
 const RegisterForm = () => {
   const methods = useForm({

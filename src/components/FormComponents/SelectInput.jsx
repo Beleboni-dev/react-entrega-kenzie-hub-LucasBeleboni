@@ -1,6 +1,6 @@
 import { useFormContext } from "react-hook-form";
 import { StyledFieldSet } from "../../../styles/StyledFieldSet";
-import { StyledDiv } from "../Pages/Register/stylesRegister/SelectArea";
+import { StyledSelectWrapper } from "../../../styles/SelectArea";
 
 export const SelectInput = ({ label, name, options }) => {
     const { register, formState: { errors }} = useFormContext();
@@ -8,7 +8,7 @@ export const SelectInput = ({ label, name, options }) => {
     return (
       <StyledFieldSet>
         <label>{label}</label>
-        <StyledDiv>
+        <StyledSelectWrapper>
           <select {...register(name)}>
             <option value="">Selecione...</option>
             {options.map((option) => (
@@ -17,7 +17,7 @@ export const SelectInput = ({ label, name, options }) => {
               </option>
             ))}
           </select>
-        </StyledDiv>
+        </StyledSelectWrapper>
         {errors[name] && <span>{errors[name].message}</span>}
       </StyledFieldSet>
     );

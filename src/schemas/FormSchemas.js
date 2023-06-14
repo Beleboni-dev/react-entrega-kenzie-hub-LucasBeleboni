@@ -7,12 +7,12 @@ export const formSchema = z.object({
     .email("Insira um email válido.")
     .nonempty("O email é obrigatório."),
   password: z
-    .string()
-    .min(8, "A senha deve ter pelo menos 8 caracteres.")
-    .regex(
-      /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]+$/,
-      "A senha deve conter letras, números e pelo menos um caractere especial."
-    ),
+  .string()
+  .min(8, "A senha deve ter pelo menos 8 caracteres")
+  .regex(/[A-Z]/, "A senha deve conter pelo menos uma letra maiúscula")
+  .regex(/[a-z]/, "A senha deve conter pelo menos uma letra minúscula")
+  .regex(/\d/, "A senha deve conter pelo menos um número")
+  .regex(/[@$!%*?&[#{}()[\]]/, "A senha deve conter pelo menos um caractere especial"),
     bio: z.string().nonempty("Campo obrigatório"),
     contact: z.string().nonempty("Campo obrigatório"),
     passwordConfirm: z.string().min(1, 'Confirmar a senha é obrigatório'),

@@ -8,7 +8,7 @@ const Template = ({page, children}) => {
   return (
     <>
       <Header page={page}/>
-      <StyledMain>
+      <StyledMain page={page}>
         {children}
       </StyledMain>
     </>
