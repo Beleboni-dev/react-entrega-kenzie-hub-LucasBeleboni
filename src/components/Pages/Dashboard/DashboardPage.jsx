@@ -7,14 +7,13 @@ import { StyledWrapper } from './StyledWrapper'
 
 const DashboardPage = () => {
 
-  const {user} = useContext(UserContext)
-  console.log(user)
+  const {user} = useContext(UserContext)  
   return (
     <Template page={'dashboard'}>
       <StyledContainer>
         <div>
-          <Title1>Olá, {user.name}</Title1>
-          <HeadlineBold>{user.course_module}</HeadlineBold>
+         {user && <Title1>Olá, {user.name}</Title1>}
+          {user && <HeadlineBold>{user.course_module}</HeadlineBold>}
         </div>
       </StyledContainer>
       <StyledWrapper>
