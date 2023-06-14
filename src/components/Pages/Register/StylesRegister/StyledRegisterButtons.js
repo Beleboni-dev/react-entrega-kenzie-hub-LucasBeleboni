@@ -1,5 +1,5 @@
 import styled, { css } from "styled-components";
-import { theme } from "../../../../../Styles/GlobalStyles";
+import { theme } from "../../../../../styles/GlobalStyles";
 
 const headerBtnStyles = css`
   height: 40px;
@@ -10,8 +10,14 @@ const headerBtnStyles = css`
 const registerBtnStyles = css`
   height: 48px;
   width: 100%;
-  background-color: ${theme.colors.colorPrimaryNegative};
+  background-color: ${(props) => props.valid === 'true' ? `${theme.colors.colorPrimary}`: `${theme.colors.colorPrimaryNegative}`};
   border: none;
+
+  &:hover{
+    background-color: ${(props) => props.valid === 'true'? `${theme.colors.colorPrimaryFocus}`: `${theme.colors.colorPrimaryNegative}`};
+    transition: 0.3s;
+  }
+
 
 `;
 
@@ -21,6 +27,7 @@ export const StyledRegisterBtn = styled.button`
   font-size: 12px;
   font-weight: 600;
   color: ${theme.colors.grey0};
+  cursor: pointer;
 
   ${(props) => props.variant === "headerBtn" && headerBtnStyles};
   ${(props) => props.variant === "registerBtn" && registerBtnStyles};
