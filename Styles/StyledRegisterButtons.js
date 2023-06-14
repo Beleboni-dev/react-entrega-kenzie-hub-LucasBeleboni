@@ -10,15 +10,19 @@ const headerBtnStyles = css`
 const registerBtnStyles = css`
   height: 48px;
   width: 100%;
-  background-color: ${(props) => props.valid === 'true' ? `${theme.colors.colorPrimary}`: `${theme.colors.colorPrimaryNegative}`};
+  background-color: ${(props) =>
+    props.valid === "true"
+      ? `${theme.colors.colorPrimary}`
+      : `${theme.colors.colorPrimaryNegative}`};
   border: none;
 
-  &:hover{
-    background-color: ${(props) => props.valid === 'true'? `${theme.colors.colorPrimaryFocus}`: `${theme.colors.colorPrimaryNegative}`};
+  &:hover {
+    background-color: ${(props) =>
+      props.valid === "true"
+        ? `${theme.colors.colorPrimaryFocus}`
+        : `${theme.colors.colorPrimaryNegative}`};
     transition: 0.3s;
   }
-
-
 `;
 
 export const StyledRegisterBtn = styled.button`

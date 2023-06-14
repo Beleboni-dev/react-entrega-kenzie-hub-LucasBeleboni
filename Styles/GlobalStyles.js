@@ -27,4 +27,3 @@ export const GlobalStyle = createGlobalStyle`
     background-color: ${theme.colors.grey4};
   }
 `;
-

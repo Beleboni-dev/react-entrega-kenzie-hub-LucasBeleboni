@@ -17,25 +17,24 @@ const LoginForm = () => {
     resolver: zodResolver(loginSchemas),
   });
   const { updateUser } = useContext(UserContext);
-  const {handleSubmit} = methods;
-  const navigate = useNavigate()
+  const { handleSubmit } = methods;
+  const navigate = useNavigate();
   const [showToast, setShowToast] = useState(false);
 
   const onSubmit = async (data) => {
-    try{ 
-      const response = await api.post(endpoints.sessions, data)
-      updateUser(response.data.user)
+    try {
+      const response = await api.post(endpoints.sessions, data);
+      updateUser(response.data.user);
       const { user, token } = response.data;
       localStorage.setItem("@USERID", user.id);
       localStorage.setItem("@TOKEN", token);
-      toast.success("Login realizado com sucesso!",{
-        autoClose:600,
+      toast.success("Login realizado com sucesso!", {
+        autoClose: 600,
       });
       setShowToast(true);
-    }
-    catch(err){
-      toast.error("Ops! Algo deu errado",{
-        autoClose:600,
+    } catch (err) {
+      toast.error("Ops! Algo deu errado", {
+        autoClose: 600,
       });
     }
   };
@@ -52,25 +51,26 @@ const LoginForm = () => {
   }, [showToast]);
 
   return (
-
-      <StyledForm onSubmit={handleSubmit(onSubmit)}>
-    <FormProvider {...methods}>
-      <Title1>Login</Title1>
-      <EmailInput label={"E-mail"} name={"email"} />
-      <RegisterPassField
+    <StyledForm onSubmit={handleSubmit(onSubmit)}>
+      <FormProvider {...methods}>
+        <Title1>Login</Title1>
+        <EmailInput label={"E-mail"} name={"email"} />
+        <RegisterPassField
           placeholder={"Digite sua senha"}
           label="Senha"
           name="password"
         />
-      <StyledButton type="submit" primary={'primary'}>Entrar</StyledButton>
-    </FormProvider>
-    <div>
-      <HeadlineBold>Ainda não possui uma conta?</HeadlineBold>
-      <Link to='/register'><StyledButton type="button">Cadastre-se</StyledButton></Link>
-    </div>
-      </StyledForm>
-  
-
+        <StyledButton type="submit" primary={"primary"}>
+          Entrar
+        </StyledButton>
+      </FormProvider>
+      <div>
+        <HeadlineBold>Ainda não possui uma conta?</HeadlineBold>
+        <Link to="/register">
+          <StyledButton type="button">Cadastre-se</StyledButton>
+        </Link>
+      </div>
+    </StyledForm>
   );
 };
 

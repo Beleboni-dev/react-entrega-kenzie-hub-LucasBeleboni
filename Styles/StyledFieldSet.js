@@ -1,7 +1,5 @@
-
 import { styled } from "styled-components";
 import { theme } from "./GlobalStyles";
-
 
 export const StyledFieldSet = styled.fieldset`
   display: flex;
@@ -9,9 +7,9 @@ export const StyledFieldSet = styled.fieldset`
   border: none;
   position: relative;
 
-  label{
+  label {
     font-size: 12.81px;
-    margin-bottom:16px;
+    margin-bottom: 16px;
   }
 
   input,
@@ -24,23 +22,21 @@ export const StyledFieldSet = styled.fieldset`
     border: 1px solid ${theme.colors.grey4};
     outline: none;
     color: ${theme.colors.grey0};
-}
-select{
+  }
+  select {
     width: 99%;
     cursor: pointer;
     color: ${theme.colors.grey0};
-}
-
+  }
 
   input:hover,
-  input:focus{
+  input:focus {
     border: 1px solid ${theme.colors.grey0};
   }
 
   span {
     font-size: 12px;
     color: ${theme.colors.grey1};
-    margin-top:9px;
+    margin-top: 9px;
   }
-
 `;

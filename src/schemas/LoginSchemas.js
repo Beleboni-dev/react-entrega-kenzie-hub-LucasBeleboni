@@ -5,7 +5,5 @@ export const loginSchemas = z.object({
     .string()
     .email("Insira um email válido.")
     .nonempty("O email é obrigatório."),
-  password: z
-    .string()
-    .nonempty("Preencha a senha"),
-})
+  password: z.string().nonempty("Preencha a senha"),
+});

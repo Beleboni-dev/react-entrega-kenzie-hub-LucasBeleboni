@@ -1,16 +1,15 @@
-import React from 'react'
-import Template from '../../../Template/Template'
-import LoginForm from './LoginForm'
-import { CustomToastContainer } from '../../../../../styles/StyledToasts'
-
+import React from "react";
+import Template from "../../../Template/Template";
+import LoginForm from "./LoginForm";
+import { CustomToastContainer } from "../../../../../styles/StyledToasts";
 
 const LoginPage = () => {
   return (
-       <Template page={'login'}>
-        <CustomToastContainer/>
-        <LoginForm />
-       </Template>
-  )
-}
+    <Template page={"login"}>
+      <CustomToastContainer />
+      <LoginForm />
+    </Template>
+  );
+};
 
-export default LoginPage
+export default LoginPage;

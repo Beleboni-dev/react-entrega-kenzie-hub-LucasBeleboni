@@ -17,18 +17,18 @@ export const RegisterPassField = ({ label, name, ...rest }) => {
   return (
     <StyledFieldSet>
       <label htmlFor={name}>{label}</label>
-        <div style={{ display: "inline-block", position: "relative"}}>
-          <input
-            type={showPassword ? "text" : "password"}
-            id={name}
-            {...register(name)}
-            {...rest}
-          />
+      <div style={{ display: "inline-block", position: "relative" }}>
+        <input
+          type={showPassword ? "text" : "password"}
+          id={name}
+          {...register(name)}
+          {...rest}
+        />
         <EyeIcons
           icon={showPassword ? faEyeSlash : faEye}
           onClick={togglePasswordVisibility}
-          />
-          </div>
+        />
+      </div>
       {errors[name] && <span>{errors[name].message}</span>}
     </StyledFieldSet>
   );

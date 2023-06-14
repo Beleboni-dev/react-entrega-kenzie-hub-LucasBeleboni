@@ -21,6 +21,4 @@ export const StyledButton = styled.button`
         : `${theme.colors.grey2}`};
     transition: 0.3s;
   }
-
-
 `;

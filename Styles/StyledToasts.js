@@ -15,8 +15,8 @@ export const CustomToastContainer = styled(ToastContainer)`
       }
     }
     .Toastify__progress-bar--success {
-        background-color: ${theme.colors.success};
-}
+      background-color: ${theme.colors.success};
+    }
   }
   .Toastify__toast--error {
     color: ${theme.colors.grey0};
@@ -26,12 +26,11 @@ export const CustomToastContainer = styled(ToastContainer)`
 
     .Toastify__toast-body {
       svg {
-        fill: ${theme.colors.negative}; 
+        fill: ${theme.colors.negative};
       }
     }
     .Toastify__progress-bar--error {
-        background-color: ${theme.colors.negative};
-}
+      background-color: ${theme.colors.negative};
+    }
   }
-
 `;

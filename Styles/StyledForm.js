@@ -14,14 +14,12 @@ export const StyledForm = styled.form`
   border-radius: 4px;
   margin-bottom: 10%;
   color: ${theme.colors.grey0};
-  h2{
+  h2 {
     text-align: center;
   }
-  h3{
+  h3 {
     color: ${theme.colors.grey1};
     text-align: center;
     margin-bottom: 22px;
   }
-
-  
-  `;
+`;
