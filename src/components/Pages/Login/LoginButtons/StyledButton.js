@@ -1,5 +1,5 @@
 import { styled } from "styled-components";
-import { theme } from "../../../../../Styles/GlobalStyles";
+import { theme } from "../../../../../styles/GlobalStyles";
 
 export const StyledButton = styled.button`
   width: 100%;

@@ -1,6 +1,6 @@
 import React from 'react';
 import { StyledHeader } from './StyledHeader';
-import { StyledRegisterBtn } from '../Pages/Register/StylesRegister/StyledRegisterButtons';
+import { StyledRegisterBtn } from '../Pages/Register/stylesRegister/StyledRegisterButtons';
 import { Link } from 'react-router-dom';
 
 const Header = ({ page }) => {

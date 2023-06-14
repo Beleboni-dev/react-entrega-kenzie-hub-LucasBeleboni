@@ -1,6 +1,6 @@
 import { useFormContext } from "react-hook-form";
 import { StyledFieldSet } from "../../../styles/StyledFieldSet";
-import { StyledDiv } from "../Pages/Register/StylesRegister/SelectArea";
+import { StyledDiv } from "../Pages/Register/stylesRegister/SelectArea";
 
 export const SelectInput = ({ label, name, options }) => {
     const { register, formState: { errors }} = useFormContext();

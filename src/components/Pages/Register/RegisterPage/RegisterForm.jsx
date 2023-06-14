@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { FormProvider, useForm } from "react-hook-form";
 import { HeadlineBold, Title1 } from "../../../../../styles/Typograph";
-import { StyledRegisterBtn } from "../StylesRegister/StyledRegisterButtons";
+import { StyledRegisterBtn } from "../stylesRegister/StyledRegisterButtons";
 import { StyledForm } from "../../../../../styles/StyledForm";
 import { TextInput } from "../../../FormComponents/TextInput";
 import { SelectInput } from "../../../FormComponents/SelectInput";

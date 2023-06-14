@@ -1,7 +1,7 @@
 import React from "react";
 import { FormProvider, useForm } from "react-hook-form";
 import { StyledForm } from "../../../../../styles/StyledForm";
-import { HeadlineBold, Title1 } from "../../../../../Styles/Typograph";
+import { HeadlineBold, Title1 } from "../../../../../styles/Typograph";
 import { StyledButton } from "../LoginButtons/StyledButton";
 import { Link } from "react-router-dom";
 import { EmailInput } from "../../../FormComponents/EmailInput";
