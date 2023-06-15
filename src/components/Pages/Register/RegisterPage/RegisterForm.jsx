@@ -11,7 +11,7 @@ import { formSchema } from "../../../../schemas/FormSchemas";
 import { api, endpoints } from "../../../../api/api";
 import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
-import { StyledRegisterBtn } from "../../../../../styles/StyledRegisterButtons";
+import { StyledAnchor } from "../../../../../styles/StyledAnchors";
 
 const RegisterForm = () => {
   const methods = useForm({
@@ -88,13 +88,13 @@ const RegisterForm = () => {
           ]}
         />
         {isValid ? (
-          <StyledRegisterBtn variant={"registerBtn"} valid={"true"}>
+          <StyledAnchor variant={"registerBtn"} valid={"true"}>
             Cadastrar
-          </StyledRegisterBtn>
+          </StyledAnchor>
         ) : (
-          <StyledRegisterBtn variant={"registerBtn"}>
+          <StyledAnchor variant={"registerBtn"}>
             Cadastrar
-          </StyledRegisterBtn>
+          </StyledAnchor>
         )}
       </FormProvider>
     </StyledForm>

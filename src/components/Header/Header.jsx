@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { StyledHeader } from "./StyledHeader";
-import { StyledRegisterBtn } from "../../../styles/StyledRegisterButtons";
+import { StyledAnchor } from "../../../styles/StyledAnchors";
 import { Link } from "react-router-dom";
 import { UserContext } from "../../hooks/UserContext";
 
@@ -17,17 +17,17 @@ const Header = ({ page }) => {
       <img src="/Logo.svg" alt="logo-kenziehub" />
       {page === "register" && (
         <Link to="/">
-          <StyledRegisterBtn variant={"headerBtn"}>Voltar</StyledRegisterBtn>
+          <StyledAnchor variant={"headerBtn"}>Voltar</StyledAnchor>
         </Link>
       )}
       {page === "dashboard" && (
         <Link to="/">
-          <StyledRegisterBtn
+          <StyledAnchor
             variant={"headerBtn"}
             onClick={handleCleanSessions}
           >
             Sair
-          </StyledRegisterBtn>
+          </StyledAnchor>
         </Link>
       )}
     </StyledHeader>
