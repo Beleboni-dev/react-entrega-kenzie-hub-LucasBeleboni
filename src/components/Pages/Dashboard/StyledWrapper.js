@@ -15,4 +15,10 @@ export const StyledWrapper = styled.div`
     font-weight: 400;
     color: #ffffff;
   }
+  @media (max-width: 768px) {
+    padding: 0 5%;
+    font-size: 12px;
+  }
+
+
 `;

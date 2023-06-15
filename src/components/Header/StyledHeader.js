@@ -9,6 +9,6 @@ export const StyledHeader = styled.header`
   margin-top: 70px;
 
   @media (max-width: 768px) {
-    padding: 0 3%;
+    padding: 0 5%;
   }
 `;

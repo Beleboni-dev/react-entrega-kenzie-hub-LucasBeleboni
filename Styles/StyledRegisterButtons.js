@@ -10,6 +10,9 @@ const headerBtnStyles = css`
 const registerBtnStyles = css`
   height: 48px;
   width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: ${(props) =>
     props.valid === "true"
       ? `${theme.colors.colorPrimary}`
@@ -25,9 +28,9 @@ const registerBtnStyles = css`
   }
 `;
 
-export const StyledRegisterBtn = styled.button`
+export const StyledRegisterBtn = styled.a`
   border-radius: 4px;
-  padding: 0px 16px;
+  padding: 12px 16px;
   font-size: 12px;
   font-weight: 600;
   color: ${theme.colors.grey0};

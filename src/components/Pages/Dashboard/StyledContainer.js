@@ -20,4 +20,15 @@ export const StyledContainer = styled.div`
   h3 {
     color: ${theme.colors.grey1};
   }
+
+  @media (max-width: 768px) {
+    padding: 0 5%;
+    font-size: 12px;
+    div:nth-child(1) {
+      flex-direction: column;
+      justify-content:center;
+      align-items: flex-start;
+      gap: 12px;
+    }
+  }
 `;

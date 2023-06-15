@@ -22,4 +22,8 @@ export const StyledForm = styled.form`
     text-align: center;
     margin-bottom: 22px;
   }
+  
+ @media(max-width: 768px){
+  
+ }
 `;
