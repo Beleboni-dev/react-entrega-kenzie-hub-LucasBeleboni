@@ -1,22 +1,22 @@
 import React, { useContext, useEffect, useState } from "react";
 import { FormProvider, useForm } from "react-hook-form";
-import { StyledForm } from "../../../../../styles/StyledForm";
-import { HeadlineBold, Title1 } from "../../../../../styles/Typograph";
+import { HeadlineBold, Title1 } from "../../../../../styles/StyledTypography";
 import { StyledButton } from "../LoginButtons/StyledButton";
 import { Link, useNavigate } from "react-router-dom";
 import { EmailInput } from "../../../FormComponents/EmailInput";
-import { RegisterPassField } from "../../Register/RegisterInputs/RegisterPassField";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { loginSchemas } from "../../../../schemas/LoginSchemas";
 import { api, endpoints } from "../../../../api/api";
-import { UserContext } from "../../../../hooks/UserContext";
+import { useUserContext } from "../../../../hooks/UserContext";
 import { toast } from "react-toastify";
+import { StyledForm } from "../../../FormComponents/FormStyles/StyledForm";
+import { RegisterPassField } from "../../../FormComponents/RegisterPassField";
 
-const LoginForm = () => {
+export const LoginForm = () => {
   const methods = useForm({
     resolver: zodResolver(loginSchemas),
   });
-  const { updateUser } = useContext(UserContext);
+  const { updateUser } = useUserContext();
   const { handleSubmit } = methods;
   const navigate = useNavigate();
   const [showToast, setShowToast] = useState(false);
@@ -73,5 +73,3 @@ const LoginForm = () => {
     </StyledForm>
   );
 };
-
-export default LoginForm;

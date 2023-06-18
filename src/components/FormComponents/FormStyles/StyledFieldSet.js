@@ -1,5 +1,6 @@
 import { styled } from "styled-components";
-import { theme } from "./GlobalStyles";
+import { theme } from "../../../../styles/Theme";
+
 
 export const StyledFieldSet = styled.fieldset`
   display: flex;

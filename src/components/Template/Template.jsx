@@ -1,13 +1,20 @@
 import React from "react";
 import Header from "../Header/Header";
-import { StyledMain } from "./StyledMain";
+import { StyledMain } from "./TemplateStyles/StyledMain";
+import { ToastContainer } from "react-toastify";
+import { CustomToastContainer } from "../../../styles/StyledToast";
 
-const Template = ({ page, children }) => {
+
+const PageTemplate = ({ page, children }) => {
   return (
     <>
       <Header page={page} />
-      <StyledMain page={page}>{children}</StyledMain>
+      <CustomToastContainer />
+      <StyledMain page={page}>
+        {children}
+      </StyledMain>
     </>
   );
 };
-export default Template;
+
+export default PageTemplate;

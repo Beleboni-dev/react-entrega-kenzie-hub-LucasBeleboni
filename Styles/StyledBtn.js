@@ -1,14 +1,7 @@
 import styled, { css } from "styled-components";
-import { theme } from "./GlobalStyles";
-import { Link } from "react-router-dom";
-
-const headerBtnStyles = css`
-  height: 40px;
-  width: 67px;
-  background-color: ${theme.colors.grey3};
+import { theme } from "./Theme";
 
 
-`;
 const registerBtnStyles = css`
   height: 48px;
   width: 100%;
@@ -27,7 +20,7 @@ const registerBtnStyles = css`
   }
 `;
 
-export const StyledAnchor = styled(Link)`
+export const StyledBtn = styled.button`
   border-radius: 4px;
   height: 48px;
   padding: 0px 16px;
@@ -35,12 +28,6 @@ export const StyledAnchor = styled(Link)`
   font-weight: 600;
   color: ${theme.colors.grey0};
   cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: none;
-  text-decoration: none;
-  outline: none;
-  ${(props) => props.variant === "headerBtn" && headerBtnStyles};
+
   ${(props) => props.variant === "registerBtn" && registerBtnStyles};
 `;

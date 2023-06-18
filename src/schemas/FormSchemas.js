@@ -2,7 +2,9 @@ import { z } from "zod";
 
 export const formSchema = z
   .object({
-    name: z.string().nonempty("O nome é obrigatório."),
+    name: z
+    .string()
+    .nonempty("O nome é obrigatório."),
     email: z
       .string()
       .email("Insira um email válido.")
@@ -17,9 +19,14 @@ export const formSchema = z
         /[@$!%*?&[#{}()[\]]/,
         "A senha deve conter pelo menos um caractere especial"
       ),
-    bio: z.string().nonempty("Campo obrigatório"),
-    contact: z.string().nonempty("Campo obrigatório"),
-    passwordConfirm: z.string().min(1, "Confirmar a senha é obrigatório"),
+    bio: z
+    .string()
+    .nonempty("Campo obrigatório"),
+    contact: z
+    .string()
+    .nonempty("Campo obrigatório"),
+    passwordConfirm: z
+    .string().min(1, "Confirmar a senha é obrigatório"),
     course_module: z.string().nonempty("Campo obrigatório"),
   })
   .refine(({ password, passwordConfirm }) => passwordConfirm === password, {

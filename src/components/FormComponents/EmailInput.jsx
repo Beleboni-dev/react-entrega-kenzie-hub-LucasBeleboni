@@ -1,5 +1,5 @@
 import { useFormContext } from "react-hook-form";
-import { StyledFieldSet } from "../../../styles/StyledFieldSet";
+import { StyledFieldSet } from "./FormStyles/StyledFieldSet";
 
 export const EmailInput = ({ label, name, ...rest }) => {
   const {

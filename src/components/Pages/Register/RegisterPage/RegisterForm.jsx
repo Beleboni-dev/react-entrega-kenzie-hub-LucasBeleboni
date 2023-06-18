@@ -1,17 +1,17 @@
 import React, { useEffect, useState } from "react";
 import { FormProvider, useForm } from "react-hook-form";
-import { HeadlineBold, Title1 } from "../../../../../styles/Typograph";
-import { StyledForm } from "../../../../../styles/StyledForm";
+import { HeadlineBold, Title1 } from "../../../../../styles/StyledTypography";
 import { TextInput } from "../../../FormComponents/TextInput";
 import { SelectInput } from "../../../FormComponents/SelectInput";
 import { EmailInput } from "../../../FormComponents/EmailInput";
-import { RegisterPassField } from "../RegisterInputs/RegisterPassField";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { formSchema } from "../../../../schemas/FormSchemas";
 import { api, endpoints } from "../../../../api/api";
 import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
-import { StyledAnchor } from "../../../../../styles/StyledAnchors";
+import { StyledBtn } from "../../../../../styles/StyledBtn";
+import { StyledForm } from "../../../FormComponents/FormStyles/StyledForm";
+import { RegisterPassField } from "../../../FormComponents/RegisterPassField";
 
 const RegisterForm = () => {
   const methods = useForm({
@@ -26,6 +26,7 @@ const RegisterForm = () => {
   } = methods;
 
   const onSubmit = async (data) => {
+    console.log(data)
     try {
       await api.post(endpoints.users, data);
       toast.success("Conta criada com sucesso", {
@@ -51,8 +52,8 @@ const RegisterForm = () => {
   }, [showToast]);
 
   return (
-    <StyledForm onSubmit={handleSubmit(onSubmit)}>
       <FormProvider {...methods}>
+    <StyledForm onSubmit={handleSubmit(onSubmit)}>
         <Title1>Crie sua conta</Title1>
         <HeadlineBold>Rápido e gratis, vamos nessa </HeadlineBold>
         <TextInput
@@ -88,16 +89,16 @@ const RegisterForm = () => {
           ]}
         />
         {isValid ? (
-          <StyledAnchor variant={"registerBtn"} valid={"true"}>
+          <StyledBtn variant={"registerBtn"} valid={"true"} type="submit">
             Cadastrar
-          </StyledAnchor>
+          </StyledBtn>
         ) : (
-          <StyledAnchor variant={"registerBtn"}>
+          <StyledBtn variant={"registerBtn"} type="submit">
             Cadastrar
-          </StyledAnchor>
+          </StyledBtn>
         )}
-      </FormProvider>
     </StyledForm>
+      </FormProvider>
   );
 };
 

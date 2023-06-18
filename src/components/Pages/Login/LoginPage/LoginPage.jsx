@@ -1,14 +1,12 @@
 import React from "react";
-import Template from "../../../Template/Template";
-import LoginForm from "./LoginForm";
-import { CustomToastContainer } from "../../../../../styles/StyledToasts";
+import PageTemplate from "../../../Template/Template";
+import { LoginForm } from "./LoginForm";
 
 const LoginPage = () => {
   return (
-    <Template page={"login"}>
-      <CustomToastContainer />
+    <PageTemplate page={"login"}>
       <LoginForm />
-    </Template>
+    </PageTemplate>
   );
 };
 

@@ -1,11 +1,13 @@
 import React, { useContext } from "react";
-import { StyledHeader } from "./StyledHeader";
-import { StyledAnchor } from "../../../styles/StyledAnchors";
+import { StyledHeader } from "./HeaderStyles/StyledHeader";
+import { StyledBtn } from "../../../styles/StyledBtn";
 import { Link } from "react-router-dom";
-import { UserContext } from "../../hooks/UserContext";
+import { useUserContext } from "../../hooks/UserContext";
+import { StyledLink } from "./HeaderStyles/StyledLink";
+
 
 const Header = ({ page }) => {
-  const { updateUser } = useContext(UserContext);
+  const { updateUser } = useUserContext();
   
   const handleCleanSessions = () => {
     localStorage.removeItem("@TOKEN");
@@ -17,16 +19,15 @@ const Header = ({ page }) => {
     <StyledHeader page={page}>
       <img src="/Logo.svg" alt="logo-kenziehub" />
       {page === "register" && (
-          <StyledAnchor  to="/" variant={"headerBtn"}>Voltar</StyledAnchor>
+          <StyledLink  to="/">Voltar</StyledLink>
       )}
       {page === "dashboard" && (
-          <StyledAnchor
+          <StyledLink
             to="/"
-            variant={"headerBtn"}
             onClick={handleCleanSessions}
           >
             Sair
-          </StyledAnchor>
+          </StyledLink>
       )}
     </StyledHeader>
   );

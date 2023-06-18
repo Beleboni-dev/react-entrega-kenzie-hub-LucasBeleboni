@@ -1,6 +1,6 @@
 import { ToastContainer } from "react-toastify";
 import { styled } from "styled-components";
-import { theme } from "./GlobalStyles";
+import { theme } from "./Theme";
 
 export const CustomToastContainer = styled(ToastContainer)`
   .Toastify__toast--success {
@@ -8,7 +8,6 @@ export const CustomToastContainer = styled(ToastContainer)`
     background-color: ${theme.colors.grey2};
     font-size: 14px;
     font-weight: 700;
-
     .Toastify__toast-body {
       svg {
         fill: ${theme.colors.success};
@@ -18,19 +17,5 @@ export const CustomToastContainer = styled(ToastContainer)`
       background-color: ${theme.colors.success};
     }
   }
-  .Toastify__toast--error {
-    color: ${theme.colors.grey0};
-    background-color: ${theme.colors.grey2};
-    font-size: 14px;
-    font-weight: 700;
 
-    .Toastify__toast-body {
-      svg {
-        fill: ${theme.colors.negative};
-      }
-    }
-    .Toastify__progress-bar--error {
-      background-color: ${theme.colors.negative};
-    }
-  }
 `;

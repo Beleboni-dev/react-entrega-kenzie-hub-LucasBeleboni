@@ -1,12 +1,13 @@
-import React, { useContext } from "react";
+import React from "react";
 import Template from "../../Template/Template";
-import { StyledContainer } from "./StyledContainer";
-import { HeadlineBold, Title1 } from "../../../../styles/Typograph";
-import { UserContext } from "../../../hooks/UserContext";
-import { StyledWrapper } from "./StyledWrapper";
+import { StyledContainer } from "./DashStyles/StyledContainer";
+import {  useUserContext } from "../../../hooks/UserContext";
+import { HeadlineBold, Title1 } from "../../../../styles/StyledTypography";
 
 const DashboardPage = () => {
-  const { user } = useContext(UserContext);
+  const { user } = useUserContext();
+
+
   return (
     <Template page={"dashboard"}>
       <StyledContainer>
@@ -15,12 +16,6 @@ const DashboardPage = () => {
           {user && <HeadlineBold>{user.course_module}</HeadlineBold>}
         </div>
       </StyledContainer>
-      <StyledWrapper>
-        <Title1>Que pena! Estamos em desenvolvimento :(</Title1>
-        <span>
-          Nossa aplicação está em desenvolvimento, em breve teremos novidades
-        </span>
-      </StyledWrapper>
     </Template>
   );
 };
