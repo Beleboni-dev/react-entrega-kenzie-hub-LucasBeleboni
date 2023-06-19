@@ -12,7 +12,7 @@ export const SelectInput = ({ label, name, options }) => {
     <StyledFieldSet>
       <label>{label}</label>
       <StyledSelectWrapper>
-        <select {...register(name)}>
+        <select {...register(name,{ required: "Campo Obrigatório" })}>
           {options.map((option) => (
             <option key={option} value={option}>
               {option}

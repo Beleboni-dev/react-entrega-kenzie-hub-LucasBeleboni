@@ -1,15 +1,16 @@
-import React, { useState } from 'react';
-import { FormProvider, useForm } from 'react-hook-form';
-import { TextInput } from '../../../../FormComponents/TextInput';
-import { StyledTechForm } from '../NewTechModal/ModalStyles/StyledTechForm';
-import { SelectInput } from '../../../../FormComponents/SelectInput';
-import { StyledButton } from '../../../../Buttons/StyledButton';
-import { api, endpoints } from '../../../../../api/api';
-import { useUserContext } from '../../../../../providers/UserContext';
+import React, { useState } from "react";
+import { FormProvider, useForm } from "react-hook-form";
+import { TextInput } from "../../../../FormComponents/TextInput";
+import { StyledTechForm } from "../NewTechModal/ModalStyles/StyledTechForm";
+import { SelectInput } from "../../../../FormComponents/SelectInput";
+import { StyledButton } from "../../../../Buttons/StyledButton";
+import { api, endpoints } from "../../../../../api/api";
+import { useUserContext } from "../../../../../providers/UserContext";
+import { toast } from "react-toastify";
 import {
   Spinner,
   SpinnerContainer,
-} from '../../../../../../styles/StyledSpinner';
+} from "../../../../../../styles/StyledSpinner";
 
 export const TechForm = () => {
   const methods = useForm();
@@ -26,7 +27,10 @@ export const TechForm = () => {
       updateModalState(false);
       setIsLoading(false);
     } catch (err) {
-      console.log(err);
+      toast.error("Ops!... " + err.message, {
+        autoClose: 500,
+      });
+      setIsLoading(false);
     }
   };
 
@@ -42,16 +46,18 @@ export const TechForm = () => {
     <FormProvider {...methods}>
       <StyledTechForm onSubmit={handleSubmit(onSubmit)}>
         <TextInput
-          label={'Nome'}
-          name={'title'}
-          placeholder={'Digite o nome da tecnologia'}
+          label={"Nome"}
+          name={"title"}
+          placeholder={"Digite o nome da tecnologia"}
+
         />
         <SelectInput
-          label={'Selecionar o status'}
-          name={'status'}
-          options={['Iniciante', 'Intermediário', 'Avançado']}
+          label={"Selecionar o status"}
+          name={"status"}
+          options={["Iniciante", "Intermediário", "Avançado"]}
+          
         />
-        <StyledButton type='submit' primary={'primary'}>
+        <StyledButton type="submit" primary={"primary"}>
           Cadastrar Tecnologia
         </StyledButton>
       </StyledTechForm>

@@ -13,8 +13,9 @@ export const TextInput = ({ label, placeholder, name, ...rest }) => {
       <input
         type='text'
         placeholder={placeholder}
-        {...register(name)}
+        {...register(name, { required: "Campo Obrigatório" })}
         id={name}
+
         {...rest}
       />
       {errors[name] && <span>{errors[name].message}</span>}
