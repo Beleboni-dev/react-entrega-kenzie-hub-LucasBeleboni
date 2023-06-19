@@ -1,6 +1,6 @@
 import { useFormContext } from "react-hook-form";
 import { StyledFieldSet } from "./FormStyles/StyledFieldSet";
-import { StyledSelectWrapper } from "../Pages/Register/RegisterStyles/SelectArea";
+import { StyledSelectWrapper } from "../../../styles/SelectArea";
 
 export const SelectInput = ({ label, name, options }) => {
   const {
@@ -13,7 +13,6 @@ export const SelectInput = ({ label, name, options }) => {
       <label>{label}</label>
       <StyledSelectWrapper>
         <select {...register(name)}>
-          <option value="">Selecione...</option>
           {options.map((option) => (
             <option key={option} value={option}>
               {option}

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import styled, { keyframes } from 'styled-components';
 import { theme } from './Theme';
 
@@ -15,7 +15,7 @@ export const SpinnerContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: ${(props) => props.techSpinner ? '100%' : '100vh'} ;
 `;
 
 export const Spinner = styled.div`

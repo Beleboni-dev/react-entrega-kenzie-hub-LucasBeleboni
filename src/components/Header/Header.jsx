@@ -1,8 +1,6 @@
 import React, { useContext } from "react";
 import { StyledHeader } from "./HeaderStyles/StyledHeader";
-import { StyledBtn } from "../../../styles/StyledBtn";
-import { Link } from "react-router-dom";
-import { useUserContext } from "../../hooks/UserContext";
+import { useUserContext } from "../../providers/UserContext";
 import { StyledLink } from "./HeaderStyles/StyledLink";
 
 

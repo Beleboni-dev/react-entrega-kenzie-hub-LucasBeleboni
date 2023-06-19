@@ -4,7 +4,7 @@ import App from "./App.jsx";
 import { BrowserRouter } from "react-router-dom";
 import { ThemeProvider } from "styled-components";
 import { GlobalStyles} from "../styles/GlobalStyles.js";
-import { UserProvider } from "./hooks/UserContext.jsx";
+import { UserProvider } from "./providers/UserContext.jsx";
 import { theme } from "../styles/Theme.js";
 import 'react-toastify/dist/ReactToastify.css';
 ReactDOM.createRoot(document.getElementById("root")).render(

@@ -27,6 +27,11 @@ export const StyledTechSection = styled.section`
     color: ${theme.colors.grey0}
   }
 
+  h3{
+    text-align: center;
+    color: ${theme.colors.grey2}
+  }
+
   @media (max-width: 768px) {
     padding: 0 5%;
     font-size: 12px;

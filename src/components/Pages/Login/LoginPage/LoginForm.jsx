@@ -1,16 +1,16 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { FormProvider, useForm } from "react-hook-form";
 import { HeadlineBold, Title1 } from "../../../../../styles/StyledTypography";
-import { StyledButton } from "../LoginButtons/StyledButton";
 import { Link, useNavigate } from "react-router-dom";
 import { EmailInput } from "../../../FormComponents/EmailInput";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { loginSchemas } from "../../../../schemas/LoginSchemas";
 import { api, endpoints } from "../../../../api/api";
-import { useUserContext } from "../../../../hooks/UserContext";
+import { useUserContext } from "../../../../providers/UserContext";
 import { toast } from "react-toastify";
 import { StyledForm } from "../../../FormComponents/FormStyles/StyledForm";
 import { RegisterPassField } from "../../../FormComponents/RegisterPassField";
+import { StyledButton } from "../../../Buttons/StyledButton";
 
 export const LoginForm = () => {
   const methods = useForm({

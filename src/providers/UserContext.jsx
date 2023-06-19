@@ -5,13 +5,17 @@ const { Provider} = UserContext;
 
 const UserProvider = ({ children }) => {
   const [user, setUser] = useState(null);
+  const [techModal, setTechModal] = useState(false);
 
   const updateUser = (userData) => {
     setUser(userData);
   };
+  const updateModalState = (modalState) => {
+    setTechModal(modalState);
+  }
 
   return (
-    <Provider value={{ user, updateUser }}>
+    <Provider value={{ user, updateUser, techModal, updateModalState }}>
       {children}
     </Provider>
   );

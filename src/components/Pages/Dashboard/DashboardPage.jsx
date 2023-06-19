@@ -1,8 +1,9 @@
 import React from "react";
 import Template from "../../Template/Template";
 import { StyledContainer } from "./DashStyles/StyledContainer";
-import {  useUserContext } from "../../../hooks/UserContext";
+import {  useUserContext } from "../../../providers/UserContext";
 import { HeadlineBold, Title1 } from "../../../../styles/StyledTypography";
+import { TechSection } from "./TechSection/TechSection";
 
 const DashboardPage = () => {
   const { user } = useUserContext();
@@ -16,6 +17,7 @@ const DashboardPage = () => {
           {user && <HeadlineBold>{user.course_module}</HeadlineBold>}
         </div>
       </StyledContainer>
+      <TechSection />
     </Template>
   );
 };

@@ -1,5 +1,5 @@
 import { styled } from "styled-components";
-import { theme } from "../../../../../styles/Theme";
+import { theme } from "./Theme";
 
 export const StyledSelectWrapper = styled.div`
   width: 100%;

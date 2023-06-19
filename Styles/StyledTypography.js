@@ -11,3 +11,9 @@ export const HeadlineBold = styled.h3`
   font-weight: 600;
   line-height: 18px;
 `;
+
+export const Title3 = styled.h3`
+font-size: 14px;
+font-weight: 700;
+line-height: 24px;
+`;

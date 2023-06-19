@@ -7,7 +7,7 @@ export const StyledForm = styled.form`
   margin: 0 auto;
   background-color: ${theme.colors.grey3};
   margin-top: 35px;
-  padding: 42px 22px;
+  padding: 32px 22px;
   display: flex;
   flex-direction: column;
   gap: 22px;
