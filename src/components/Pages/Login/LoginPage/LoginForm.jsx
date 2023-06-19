@@ -11,6 +11,7 @@ import { toast } from 'react-toastify';
 import { StyledForm } from '../../../FormComponents/FormStyles/StyledForm';
 import { RegisterPassField } from '../../../FormComponents/RegisterPassField';
 import { StyledButton } from '../../../Buttons/StyledButton';
+import { StyledLink } from '../../../Header/HeaderStyles/StyledLink';
 
 export const LoginForm = () => {
   const methods = useForm({
@@ -66,9 +67,9 @@ export const LoginForm = () => {
       </FormProvider>
       <div>
         <HeadlineBold>Ainda não possui uma conta?</HeadlineBold>
-        <Link to='/register'>
-          <StyledButton type='button' width="100%">Cadastre-se</StyledButton>
-        </Link>
+        <StyledLink login={'login'} to='/register'>
+        Cadastre-se
+        </StyledLink>
       </div>
     </StyledForm>
   );

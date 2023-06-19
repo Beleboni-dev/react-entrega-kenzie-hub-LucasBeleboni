@@ -10,7 +10,7 @@ import {
   Spinner,
   SpinnerContainer,
 } from "../../../../../../styles/StyledSpinner";
-import StyledTechForm from "../techModal/ModalStyles/StyledTechForm";
+import { StyledTechForm } from "../../../../../../styles/StyledTechForm";
 
 export const TechForm = ({ mode }) => {
   const methods = useForm();

@@ -1,11 +1,12 @@
-import { Link } from 'react-router-dom';
-import { styled } from 'styled-components';
-import { theme } from '../../../../styles/Theme';
+import { Link } from "react-router-dom";
+import { styled } from "styled-components";
+import { theme } from "../../../../styles/Theme";
 
 export const StyledLink = styled(Link)`
-  height: 40px;
-  width: 67px;
-  background-color: ${theme.colors.grey3};
+  height: ${(props) => (props.login ? "48px" : "40px")};
+  width: ${(props) => (props.login ? "100%" : "67px")};
+  background-color: ${(props) =>
+    props.login ? `${theme.colors.grey2}` : `${theme.colors.grey3}`};
   display: flex;
   align-items: center;
   justify-content: center;
