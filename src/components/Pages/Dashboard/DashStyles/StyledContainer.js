@@ -1,5 +1,5 @@
-import { styled } from "styled-components";
-import { theme } from "../../../../../styles/Theme";
+import { styled } from 'styled-components';
+import { theme } from '../../../../../styles/Theme';
 
 export const StyledContainer = styled.div`
   border-bottom: 1px solid ${theme.colors.grey3};

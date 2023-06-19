@@ -1,10 +1,10 @@
-import React, { useEffect } from "react";
-import { Outlet, useNavigate } from "react-router-dom";
-import { useUserContext } from "../providers/UserContext";
-import { api, endpoints } from "../api/api";
+import React, { useEffect } from 'react';
+import { Outlet, useNavigate } from 'react-router-dom';
+import { useUserContext } from '../providers/UserContext';
+import { api, endpoints } from '../api/api';
 
-import { Spinner, SpinnerContainer } from "../../styles/StyledSpinner";
-import { toast } from "react-toastify";
+import { Spinner, SpinnerContainer } from '../../styles/StyledSpinner';
+import { toast } from 'react-toastify';
 
 const ProtectedRoute = () => {
   const { user, updateUser } = useUserContext();
@@ -19,10 +19,10 @@ const ProtectedRoute = () => {
          const { data } = await api.get(endpoints.profile);
          updateUser(data);
         } catch {
-          navigate("/");
-          localStorage.removeItem("@TOKEN")
-          localStorage.removeItem("@USERID")
-          toast.error("Você precisa estar autenticado",{
+          navigate('/');
+          localStorage.removeItem('@TOKEN')
+          localStorage.removeItem('@USERID')
+          toast.error('Você precisa estar autenticado',{
             autoClose: 600,
           })
         }

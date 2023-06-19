@@ -1,5 +1,5 @@
-import { useFormContext } from "react-hook-form";
-import { StyledFieldSet } from "./FormStyles/StyledFieldSet";
+import { useFormContext } from 'react-hook-form';
+import { StyledFieldSet } from './FormStyles/StyledFieldSet';
 
 export const EmailInput = ({ label, name, ...rest }) => {
   const {
@@ -11,10 +11,10 @@ export const EmailInput = ({ label, name, ...rest }) => {
     <StyledFieldSet>
       <label htmlFor={label}>{label}</label>
       <input
-        type="email"
-        autoComplete="email"
+        type='email'
+        autoComplete='email'
         id={label}
-        placeholder="Digite seu email"
+        placeholder='Digite seu email'
         {...register(name)}
         {...rest}
       />

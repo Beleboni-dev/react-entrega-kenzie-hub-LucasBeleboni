@@ -1,5 +1,5 @@
-import { styled } from "styled-components";
-import { theme } from "../../../../../../styles/Theme";
+import { styled } from 'styled-components';
+import { theme } from '../../../../../../styles/Theme';
 
 export const StyledList = styled.ul`
   width: 100%;
@@ -8,8 +8,8 @@ export const StyledList = styled.ul`
   padding: 22px 26px 24px 23px;
   list-style: none;
   background-color: ${theme.colors.grey3};
-display: flex;
-flex-direction: column-reverse;
+  display: flex;
+  flex-direction: column-reverse;
   li {
     width: 100%;
     display: flex;
@@ -32,6 +32,5 @@ flex-direction: column-reverse;
       font-size: 12px;
       font-weight: 400;
     }
-
   }
 `;

@@ -1,8 +1,8 @@
-import { useFormContext } from "react-hook-form";
-import { StyledFieldSet } from "./FormStyles/StyledFieldSet";
-import { useState } from "react";
-import { faEye, faEyeSlash } from "@fortawesome/free-solid-svg-icons";
-import { EyeIcons } from "../../../styles/StyledIcon";
+import { useFormContext } from 'react-hook-form';
+import { StyledFieldSet } from './FormStyles/StyledFieldSet';
+import { useState } from 'react';
+import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
+import { EyeIcons } from '../../../styles/StyledIcon';
 
 export const RegisterPassField = ({ label, name, ...rest }) => {
   const {
@@ -17,9 +17,9 @@ export const RegisterPassField = ({ label, name, ...rest }) => {
   return (
     <StyledFieldSet>
       <label htmlFor={name}>{label}</label>
-      <div style={{ display: "inline-block", position: "relative" }}>
+      <div style={{ display: 'inline-block', position: 'relative' }}>
         <input
-          type={showPassword ? "text" : "password"}
+          type={showPassword ? 'text' : 'password'}
           id={name}
           {...register(name)}
           {...rest}

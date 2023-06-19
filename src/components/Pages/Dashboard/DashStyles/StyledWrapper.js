@@ -1,5 +1,5 @@
-import { styled } from "styled-components";
-import { theme } from "../../../../../styles/Theme";
+import { styled } from 'styled-components';
+import { theme } from '../../../../../styles/Theme';
 
 export const StyledWrapper = styled.div`
   max-width: 768px;

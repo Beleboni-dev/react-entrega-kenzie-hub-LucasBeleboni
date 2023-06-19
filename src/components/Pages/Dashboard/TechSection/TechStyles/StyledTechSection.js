@@ -1,5 +1,5 @@
-import { styled } from "styled-components";
-import { theme } from "../../../../../../styles/Theme";
+import { styled } from 'styled-components';
+import { theme } from '../../../../../../styles/Theme';
 
 export const StyledTechSection = styled.section`
   max-width: 768px;
@@ -13,7 +13,6 @@ export const StyledTechSection = styled.section`
     margin-bottom: 21px;
   }
 
-
   div:nth-child(2) {
     display: flex;
     justify-content: center;
@@ -23,13 +22,13 @@ export const StyledTechSection = styled.section`
     background-color: ${theme.colors.grey3};
     cursor: pointer;
   }
-  h2{
-    color: ${theme.colors.grey0}
+  h2 {
+    color: ${theme.colors.grey0};
   }
 
-  h3{
+  h3 {
     text-align: center;
-    color: ${theme.colors.grey2}
+    color: ${theme.colors.grey2};
   }
 
   @media (max-width: 768px) {

@@ -1,5 +1,5 @@
-import { styled } from "styled-components";
-import { theme } from "../../../../styles/Theme";
+import { styled } from 'styled-components';
+import { theme } from '../../../../styles/Theme';
 
 export const StyledForm = styled.form`
   width: 100%;
@@ -22,8 +22,7 @@ export const StyledForm = styled.form`
     text-align: center;
     margin-bottom: 22px;
   }
-  
- @media(max-width: 768px){
-  
- }
+
+  @media (max-width: 768px) {
+  }
 `;

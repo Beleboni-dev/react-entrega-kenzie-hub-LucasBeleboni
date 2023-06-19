@@ -1,17 +1,17 @@
-import React, { useEffect, useState } from "react";
-import { FormProvider, useForm } from "react-hook-form";
-import { HeadlineBold, Title1 } from "../../../../../styles/StyledTypography";
-import { TextInput } from "../../../FormComponents/TextInput";
-import { SelectInput } from "../../../FormComponents/SelectInput";
-import { EmailInput } from "../../../FormComponents/EmailInput";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { formSchema } from "../../../../schemas/FormSchemas";
-import { api, endpoints } from "../../../../api/api";
-import { toast } from "react-toastify";
-import { useNavigate } from "react-router-dom";
-import { StyledBtn } from "../../../../../styles/StyledBtn";
-import { StyledForm } from "../../../FormComponents/FormStyles/StyledForm";
-import { RegisterPassField } from "../../../FormComponents/RegisterPassField";
+import React, { useEffect, useState } from 'react';
+import { FormProvider, useForm } from 'react-hook-form';
+import { HeadlineBold, Title1 } from '../../../../../styles/StyledTypography';
+import { TextInput } from '../../../FormComponents/TextInput';
+import { SelectInput } from '../../../FormComponents/SelectInput';
+import { EmailInput } from '../../../FormComponents/EmailInput';
+import { zodResolver } from '@hookform/resolvers/zod';
+import { formSchema } from '../../../../schemas/FormSchemas';
+import { api, endpoints } from '../../../../api/api';
+import { toast } from 'react-toastify';
+import { useNavigate } from 'react-router-dom';
+import { StyledBtn } from '../../../../../styles/StyledBtn';
+import { StyledForm } from '../../../FormComponents/FormStyles/StyledForm';
+import { RegisterPassField } from '../../../FormComponents/RegisterPassField';
 
 const RegisterForm = () => {
   const methods = useForm({
@@ -29,12 +29,12 @@ const RegisterForm = () => {
     console.log(data)
     try {
       await api.post(endpoints.users, data);
-      toast.success("Conta criada com sucesso", {
+      toast.success('Conta criada com sucesso', {
         autoClose: 700,
       });
       setShowToast(true);
     } catch {
-      toast.error("Ops! Algo deu errado", {
+      toast.error('Ops! Algo deu errado', {
         autoClose: 700,
       });
     }
@@ -44,7 +44,7 @@ const RegisterForm = () => {
     if (showToast) {
       const timeout = setTimeout(() => {
         setShowToast(false);
-        navigate("/");
+        navigate('/');
       }, 2000);
 
       return () => clearTimeout(timeout);
@@ -57,43 +57,43 @@ const RegisterForm = () => {
         <Title1>Crie sua conta</Title1>
         <HeadlineBold>Rápido e gratis, vamos nessa </HeadlineBold>
         <TextInput
-          label={"Nome"}
-          placeholder={"Digite seu nome"}
-          name={"name"}
+          label={'Nome'}
+          placeholder={'Digite seu nome'}
+          name={'name'}
         />
-        <EmailInput label={"E-mail"} name={"email"} />
+        <EmailInput label={'E-mail'} name={'email'} />
         <RegisterPassField
-          placeholder={"Digite sua senha"}
-          label="Senha"
-          name="password"
+          placeholder={'Digite sua senha'}
+          label='Senha'
+          name='password'
         />
         <RegisterPassField
-          placeholder={"Confirme sua senha"}
-          label="Confirme senha"
-          name="passwordConfirm"
+          placeholder={'Confirme sua senha'}
+          label='Confirme senha'
+          name='passwordConfirm'
         />
-        <TextInput label={"Bio"} placeholder={"Fale sobre você"} name={"bio"} />
+        <TextInput label={'Bio'} placeholder={'Fale sobre você'} name={'bio'} />
         <TextInput
-          label={"Contato"}
-          placeholder={"Opção de contato"}
-          name={"contact"}
+          label={'Contato'}
+          placeholder={'Opção de contato'}
+          name={'contact'}
         />
         <SelectInput
-          label="Selecionar módulo"
-          name="course_module"
+          label='Selecionar módulo'
+          name='course_module'
           options={[
-            "Primeiro módulo (Introdução ao Frontend)",
-            "Segundo módulo (Frontend Avançado)",
-            "Terceiro módulo (Introdução ao Backend)",
-            "Quarto módulo (Backend Avançado)",
+            'Primeiro módulo (Introdução ao Frontend)',
+            'Segundo módulo (Frontend Avançado)',
+            'Terceiro módulo (Introdução ao Backend)',
+            'Quarto módulo (Backend Avançado)',
           ]}
         />
         {isValid ? (
-          <StyledBtn variant={"registerBtn"} valid={"true"} type="submit">
+          <StyledBtn variant={'registerBtn'} valid={'true'} type='submit'>
             Cadastrar
           </StyledBtn>
         ) : (
-          <StyledBtn variant={"registerBtn"} type="submit">
+          <StyledBtn variant={'registerBtn'} type='submit'>
             Cadastrar
           </StyledBtn>
         )}

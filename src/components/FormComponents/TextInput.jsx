@@ -1,5 +1,5 @@
-import { useFormContext } from "react-hook-form";
-import { StyledFieldSet } from "./FormStyles/StyledFieldSet";
+import { useFormContext } from 'react-hook-form';
+import { StyledFieldSet } from './FormStyles/StyledFieldSet';
 
 export const TextInput = ({ label, placeholder, name, ...rest }) => {
   const {
@@ -11,7 +11,7 @@ export const TextInput = ({ label, placeholder, name, ...rest }) => {
     <StyledFieldSet>
       <label htmlFor={name}>{label}</label>
       <input
-        type="text"
+        type='text'
         placeholder={placeholder}
         {...register(name)}
         id={name}

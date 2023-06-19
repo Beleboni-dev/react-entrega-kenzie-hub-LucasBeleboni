@@ -1,6 +1,6 @@
-import { useFormContext } from "react-hook-form";
-import { StyledFieldSet } from "./FormStyles/StyledFieldSet";
-import { StyledSelectWrapper } from "../../../styles/SelectArea";
+import { useFormContext } from 'react-hook-form';
+import { StyledFieldSet } from './FormStyles/StyledFieldSet';
+import { StyledSelectWrapper } from '../../../styles/SelectArea';
 
 export const SelectInput = ({ label, name, options }) => {
   const {

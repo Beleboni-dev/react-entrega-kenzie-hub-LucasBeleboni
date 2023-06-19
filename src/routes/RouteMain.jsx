@@ -12,13 +12,13 @@ const RoutesMain = () => {
     <UserProvider>
       <Routes>
         <Route element={<CommonRoute />}>
-        <Route index path="/" element={<LoginPage />} />
-        <Route path="/register" element={<RegisterPage />} />
+        <Route index path='/' element={<LoginPage />} />
+        <Route path='/register' element={<RegisterPage />} />
         </Route>
         <Route element={<ProtectedRoute />}>
-        <Route index path="/dashboard" element={<DashboardPage />} />
+        <Route index path='/dashboard' element={<DashboardPage />} />
         </Route>
-        <Route path="*" element={<Navigate to="/" replace />} />
+        <Route path='*' element={<Navigate to='/' replace />} />
       </Routes>
     </UserProvider>
   );
