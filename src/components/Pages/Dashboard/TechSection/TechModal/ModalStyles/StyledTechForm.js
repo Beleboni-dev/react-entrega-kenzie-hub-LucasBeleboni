@@ -1,5 +1,5 @@
-import { styled } from 'styled-components';
-import { theme } from '../../../../../../../styles/Theme';
+import { styled } from "styled-components";
+import { theme } from "../../../../../../../styles/Theme";
 
 export const StyledTechForm = styled.form`
   width: 100%;
@@ -7,6 +7,10 @@ export const StyledTechForm = styled.form`
   margin-bottom: 32px;
   padding: 0 22px;
 
+  div:nth-child(3) {
+    display: flex;
+    justify-content: space-between;
+  }
   div:nth-child(2) {
     padding: 0;
     border: 1px solid ${theme.colors.grey2};

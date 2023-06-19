@@ -8,7 +8,7 @@ export const StyledHeader = styled.header`
     props.page === 'login' ? 'center' : 'space-between'};
   margin-top: 70px;
 
-  @media (max-width: 768px) {
+  @media (max-width: 790px) {
     padding: 0 5%;
   }
 `;

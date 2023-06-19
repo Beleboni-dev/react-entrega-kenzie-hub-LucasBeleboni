@@ -1,7 +1,7 @@
 import { useFormContext } from 'react-hook-form';
 import { StyledFieldSet } from './FormStyles/StyledFieldSet';
 
-export const TextInput = ({ label, placeholder, name, ...rest }) => {
+export const TextInput = ({ label, placeholder, name, required = true, ...rest }) => {
   const {
     register,
     formState: { errors },
@@ -13,7 +13,7 @@ export const TextInput = ({ label, placeholder, name, ...rest }) => {
       <input
         type='text'
         placeholder={placeholder}
-        {...register(name, { required: "Campo Obrigatório" })}
+        {...register(name, { required: required && "Campo Obrigatório" })}
         id={name}
 
         {...rest}

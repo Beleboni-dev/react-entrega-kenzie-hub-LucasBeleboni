@@ -15,7 +15,7 @@ export const SpinnerContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  height: ${(props) => props.techSpinner ? '100%' : '100vh'} ;
+  height: ${(props) => props.spinner === 'true' ? '100%' : '100vh'} ;
 `;
 
 export const Spinner = styled.div`
