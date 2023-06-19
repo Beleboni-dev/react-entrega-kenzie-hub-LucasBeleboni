@@ -60,14 +60,14 @@ export const LoginForm = () => {
           label='Senha'
           name='password'
         />
-        <StyledButton type='submit' primary={'primary'}>
+        <StyledButton type='submit' primary={'primary'} width="100%">
           Entrar
         </StyledButton>
       </FormProvider>
       <div>
         <HeadlineBold>Ainda não possui uma conta?</HeadlineBold>
         <Link to='/register'>
-          <StyledButton type='button'>Cadastre-se</StyledButton>
+          <StyledButton type='button' width="100%">Cadastre-se</StyledButton>
         </Link>
       </div>
     </StyledForm>

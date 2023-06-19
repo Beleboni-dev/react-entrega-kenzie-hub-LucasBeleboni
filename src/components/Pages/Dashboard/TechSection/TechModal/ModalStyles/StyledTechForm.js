@@ -1,7 +1,7 @@
 import { styled } from "styled-components";
 import { theme } from "../../../../../../../styles/Theme";
 
-export const StyledTechForm = styled.form`
+const StyledTechForm = styled.form`
   width: 100%;
   max-width: 369px;
   margin-bottom: 32px;
@@ -36,3 +36,5 @@ export const StyledTechForm = styled.form`
     border: none;
   }
 `;
+
+export default StyledTechForm;

@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { FormProvider, useForm } from "react-hook-form";
 import { TextInput } from "../../../../FormComponents/TextInput";
-import { StyledTechForm } from "../techModal/ModalStyles/StyledTechForm";
 import { SelectInput } from "../../../../FormComponents/SelectInput";
 import { StyledButton } from "../../../../Buttons/StyledButton";
 import { api, endpoints } from "../../../../../api/api";
@@ -11,6 +10,7 @@ import {
   Spinner,
   SpinnerContainer,
 } from "../../../../../../styles/StyledSpinner";
+import StyledTechForm from "../techModal/ModalStyles/StyledTechForm";
 
 export const TechForm = ({ mode }) => {
   const methods = useForm();
