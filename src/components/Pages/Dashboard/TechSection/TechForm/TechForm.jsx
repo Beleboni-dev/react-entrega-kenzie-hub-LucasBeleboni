@@ -11,12 +11,13 @@ import {
   SpinnerContainer,
 } from "../../../../../../styles/StyledSpinner";
 import { StyledTechForm } from "../../../../../../styles/StyledTechForm";
+import { useTechContext } from "../../../../../providers/TechContext";
 
 export const TechForm = ({ mode }) => {
   const methods = useForm();
   const { handleSubmit } = methods;
-  const { updateUser, updateModalState, selectedTech, editModalState } =
-    useUserContext();
+  const { updateUser } = useUserContext();
+  const { updateModalState, selectedTech, editModalState } = useTechContext();
   const [isLoading, setIsLoading] = useState(false);
 
   const onSubmit = async (formData) => {

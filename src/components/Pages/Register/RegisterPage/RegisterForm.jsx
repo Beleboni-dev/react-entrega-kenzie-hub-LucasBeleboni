@@ -26,7 +26,7 @@ const RegisterForm = () => {
   } = methods;
 
   const onSubmit = async (data) => {
-    console.log(data)
+
     try {
       await api.post(endpoints.users, data);
       toast.success('Conta criada com sucesso', {

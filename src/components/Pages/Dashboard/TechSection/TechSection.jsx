@@ -7,11 +7,12 @@ import { useUserContext } from '../../../../providers/UserContext';
 import { HeadlineBold, Title1 } from '../../../../../styles/StyledTypography';
 import { BackdropModal } from './TechModal/BackdropModal';
 import { Modal } from './TechModal/Modal';
+import { useTechContext } from '../../../../providers/TechContext';
 
 
 export const TechSection = () => {
-  const { user, techModal, updateModalState, editModalState, editModal, setSelectedTech} = useUserContext();
-
+  const { user} = useUserContext();
+  const {techModal, updateModalState, editModalState, editModal, setSelectedTech} = useTechContext()
   const toggleTechModal = () => {
     updateModalState(!techModal);
   };
