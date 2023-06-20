@@ -6,7 +6,7 @@ export const StyledModal = styled.div`
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 100%;
+  width: 86%;
   max-width: 369px;
   background-color: ${theme.colors.grey3};
   div:nth-child(1) {

@@ -16,16 +16,17 @@ export const StyledList = styled.ul`
     align-items: center;
     padding: 0px 22px;
     justify-content: space-between;
+    flex-wrap: wrap;
     background-color: ${theme.colors.grey4};
     margin-top: 16px;
-    height: 49px;
+    min-height: 45px;
+    height: max-content;
     border-radius: 4px;
     cursor: pointer;
     h3 {
       color: ${theme.colors.grey0};
       font-size: 14px;
       font-weight: 700;
-      line-height: 22px;
     }
     span {
       color: ${theme.colors.grey1};
@@ -33,4 +34,11 @@ export const StyledList = styled.ul`
       font-weight: 400;
     }
   }
+  @media(max-width: 390px){
+      li{
+        font-size: 9px;
+        height: auto; 
+        padding: 1rem;
+      }
+    }
 `;
