@@ -1,6 +1,7 @@
 import React from 'react';
-import PageTemplate from '../../../Template/Template';
-import RegisterForm from './RegisterForm';
+import PageTemplate from '../../components/Template/Template';
+import RegisterForm from './RegisterForm/RegisterForm';
+
 
 const RegisterPage = () => {
   return (

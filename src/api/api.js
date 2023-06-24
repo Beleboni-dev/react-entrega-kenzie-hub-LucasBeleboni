@@ -12,6 +12,7 @@ export const endpoints = {
 
 export const api = axios.create({
   baseURL,
+  timeout: 4000,
 });
 
 api.interceptors.request.use((config) => {

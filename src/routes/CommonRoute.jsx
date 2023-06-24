@@ -1,5 +1,5 @@
 import { Outlet, useNavigate } from 'react-router-dom';
-import { Spinner, SpinnerContainer } from '../../styles/StyledSpinner';
+import { Spinner, SpinnerContainer } from '../styles/StyledSpinner';
 import { useEffect } from 'react';
 
 const CommonRoute = () => {
@@ -12,6 +12,7 @@ const CommonRoute = () => {
         navigate('/dashboard');
     }
   }
+  
   checkToken();
   
   }, [token]);

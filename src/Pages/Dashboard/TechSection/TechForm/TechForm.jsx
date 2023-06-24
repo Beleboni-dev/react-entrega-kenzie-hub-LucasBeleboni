@@ -1,17 +1,17 @@
 import React, { useState } from "react";
 import { FormProvider, useForm } from "react-hook-form";
-import { TextInput } from "../../../../FormComponents/TextInput";
-import { SelectInput } from "../../../../FormComponents/SelectInput";
-import { StyledButton } from "../../../../Buttons/StyledButton";
-import { api, endpoints } from "../../../../../api/api";
-import { useUserContext } from "../../../../../providers/UserContext";
+import { TextInput } from "../../../../components/FormComponents/TextInput";
+import { SelectInput } from "../../../../components/FormComponents/SelectInput";
+import { StyledButton } from "../../../../components/Buttons/StyledButton";
+import { api, endpoints } from "../../../../api/api";
+import { useUserContext } from "../../../../providers/UserContext";
 import { toast } from "react-toastify";
 import {
   Spinner,
   SpinnerContainer,
-} from "../../../../../../styles/StyledSpinner";
-import { StyledTechForm } from "../../../../../../styles/StyledTechForm";
-import { useTechContext } from "../../../../../providers/TechContext";
+} from "../../../../styles/StyledSpinner";
+import { StyledTechForm } from "../../../../styles/StyledTechForm";
+import { useTechContext } from "../../../../providers/TechContext";
 
 export const TechForm = ({ mode }) => {
   const methods = useForm();

@@ -2,7 +2,7 @@ import React from 'react';
 import Header from '../Header/Header';
 import { StyledMain } from './TemplateStyles/StyledMain';
 import { ToastContainer } from 'react-toastify';
-import { CustomToastContainer } from '../../../styles/StyledToast';
+import { CustomToastContainer } from '../../styles/StyledToast';
 
 
 const PageTemplate = ({ page, children }) => {

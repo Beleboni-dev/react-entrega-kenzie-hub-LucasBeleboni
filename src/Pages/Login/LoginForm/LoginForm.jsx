@@ -1,21 +1,21 @@
 import React, { useEffect, useState } from 'react';
 import { FormProvider, useForm } from 'react-hook-form';
-import { HeadlineBold, Title1 } from '../../../../../styles/StyledTypography';
-import { Link, useNavigate } from 'react-router-dom';
-import { EmailInput } from '../../../FormComponents/EmailInput';
+import {  useNavigate } from 'react-router-dom';
+import { EmailInput } from '../../../components/FormComponents/EmailInput';
 import { zodResolver } from '@hookform/resolvers/zod';
-import { loginSchemas } from '../../../../schemas/LoginSchemas';
-import { api, endpoints } from '../../../../api/api';
-import { useUserContext } from '../../../../providers/UserContext';
+import { api, endpoints } from '../../../api/api';
+import { useUserContext } from '../../../providers/UserContext';
 import { toast } from 'react-toastify';
-import { StyledForm } from '../../../FormComponents/FormStyles/StyledForm';
-import { RegisterPassField } from '../../../FormComponents/RegisterPassField';
-import { StyledButton } from '../../../Buttons/StyledButton';
-import { StyledLink } from '../../../Header/HeaderStyles/StyledLink';
+import { StyledForm } from '../../../components/FormComponents/FormStyles/StyledForm';
+import { RegisterPassField } from '../../../components/FormComponents/RegisterPassField';
+import { StyledLink } from '../../../components/Header/HeaderStyles/StyledLink';
+import { HeadlineBold, Title1 } from '../../../styles/StyledTypography';
+import { loginSchema } from '../../../schema/LoginSchemas';
+import { StyledButton } from '../../../components/Buttons/StyledButton';
 
 export const LoginForm = () => {
   const methods = useForm({
-    resolver: zodResolver(loginSchemas),
+    resolver: zodResolver(loginSchema),
   });
   const { updateUser } = useUserContext();
   const { handleSubmit } = methods;

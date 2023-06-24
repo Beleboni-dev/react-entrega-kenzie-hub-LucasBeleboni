@@ -2,7 +2,7 @@ import { useFormContext } from 'react-hook-form';
 import { StyledFieldSet } from './FormStyles/StyledFieldSet';
 import { useState } from 'react';
 import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
-import { EyeIcons } from '../../../styles/StyledIcon';
+import { EyeIcons } from '../../styles/StyledIcon';
 
 export const RegisterPassField = ({ label, name, ...rest }) => {
   const {

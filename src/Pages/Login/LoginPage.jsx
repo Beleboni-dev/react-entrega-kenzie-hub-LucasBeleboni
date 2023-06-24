@@ -1,6 +1,6 @@
 import React from 'react';
-import PageTemplate from '../../../Template/Template';
-import { LoginForm } from './LoginForm';
+import PageTemplate from './../../components/Template/Template';
+import { LoginForm } from './LoginForm/LoginForm';
 
 const LoginPage = () => {
   return (

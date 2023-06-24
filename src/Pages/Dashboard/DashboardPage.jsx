@@ -1,8 +1,8 @@
 import React from "react";
-import Template from "../../Template/Template";
+import Template from "../../components/Template/Template";
 import { StyledContainer } from "./DashStyles/StyledContainer";
-import { useUserContext } from "../../../providers/UserContext";
-import { HeadlineBold, Title1 } from "../../../../styles/StyledTypography";
+import { useUserContext } from "../../providers/UserContext";
+import { HeadlineBold, Title1 } from "../../styles/StyledTypography";
 import { TechSection } from "./TechSection/TechSection";
 
 const DashboardPage = () => {

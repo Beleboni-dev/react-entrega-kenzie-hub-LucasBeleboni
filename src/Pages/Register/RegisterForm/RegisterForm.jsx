@@ -1,17 +1,17 @@
 import React, { useEffect, useState } from 'react';
 import { FormProvider, useForm } from 'react-hook-form';
-import { HeadlineBold, Title1 } from '../../../../../styles/StyledTypography';
-import { TextInput } from '../../../FormComponents/TextInput';
-import { SelectInput } from '../../../FormComponents/SelectInput';
-import { EmailInput } from '../../../FormComponents/EmailInput';
+import { TextInput } from '../../../components/FormComponents/TextInput';
+import { SelectInput } from '../../../components/FormComponents/SelectInput';
 import { zodResolver } from '@hookform/resolvers/zod';
-import { formSchema } from '../../../../schemas/FormSchemas';
-import { api, endpoints } from '../../../../api/api';
+import { api, endpoints } from '../../../api/api';
 import { toast } from 'react-toastify';
 import { useNavigate } from 'react-router-dom';
-import { StyledBtn } from '../../../../../styles/StyledBtn';
-import { StyledForm } from '../../../FormComponents/FormStyles/StyledForm';
-import { RegisterPassField } from '../../../FormComponents/RegisterPassField';
+import { StyledForm } from '../../../components/FormComponents/FormStyles/StyledForm';
+import { RegisterPassField } from '../../../components/FormComponents/RegisterPassField';
+import { EmailInput } from '../../../components/FormComponents/EmailInput';
+import { HeadlineBold, Title1 } from '../../../styles/StyledTypography';
+import { formSchema } from '../../../schema/FormSchemas';
+import { StyledBtn } from '../../../styles/StyledBtn';
 
 const RegisterForm = () => {
   const methods = useForm({
@@ -26,7 +26,7 @@ const RegisterForm = () => {
   } = methods;
 
   const onSubmit = async (data) => {
-
+    console.log(data);
     try {
       await api.post(endpoints.users, data);
       toast.success('Conta criada com sucesso', {

@@ -3,11 +3,11 @@ import React, { useState } from 'react';
 import { StyledPlusIcon } from './TechStyles/StyledPlusButton';
 import { StyledTechSection } from './TechStyles/StyledTechSection';
 import { StyledList } from './TechStyles/StyledList';
-import { useUserContext } from '../../../../providers/UserContext';
-import { HeadlineBold, Title1 } from '../../../../../styles/StyledTypography';
+import { useUserContext } from '../../../providers/UserContext';
+import { HeadlineBold, Title1 } from '../../../styles/StyledTypography';
 import { BackdropModal } from './TechModal/BackdropModal';
 import { Modal } from './TechModal/Modal';
-import { useTechContext } from '../../../../providers/TechContext';
+import { useTechContext } from '../../../providers/TechContext';
 
 
 export const TechSection = () => {
